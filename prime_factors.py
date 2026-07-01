@@ -1,7 +1,11 @@
 class PrimeFactor:
     def of(self, num: int) -> list[int]:
+        factors = []
         if num > 1:
             if num == 4:
-                return [2, 2]
-            return [num]
-        return []
+                while num % 2 == 0:
+                    factors.append(2)
+                    num //= 2
+            else:
+                factors.append(num)
+        return factors
