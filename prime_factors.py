@@ -1,7 +1,5 @@
 class PrimeFactor:
     def of(self, num: int) -> list[int]:
-        if num == 2:
-            return [2]
-        if num == 3:
-            return [3]
+        if num > 1:
+            return [num]
         return []
